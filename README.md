@@ -2,17 +2,16 @@
 
 [![Docker Automated build](https://img.shields.io/docker/automated/ruslanys/wrk.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/ruslanys/wrk/) [![Docker Build Status](https://img.shields.io/docker/build/ruslanys/wrk.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/ruslanys/wrk/) [![Docker Pulls](https://img.shields.io/docker/pulls/ruslanys/wrk.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/ruslanys/wrk/)
 
+## Images
+
+* Ubuntu: `ruslanys/wrk:latest`, `ruslanys/wrk:ubuntu`
+* Alpine: `ruslanys/wrk:alpine`
 
 ## Usage
 
 ```
 $ docker run --rm -it ruslanys/wrk -t12 -c400 -d10s https://hub.docker.com/
 ```
-
-## Images
-
-* Ubuntu: `ruslanys/wrk:latest`, `ruslanys/wrk:ubuntu`
-* Alpine: `ruslanys/wrk:alpine`
 
 ## wrk - a HTTP benchmarking tool
 
