@@ -8,8 +8,13 @@
 ## Usage
 
 ```
-$ docker run --rm -t ruslanys/wrk -t12 -c400 -d10s https://hub.docker.com/
+$ docker run --rm -it ruslanys/wrk -t12 -c400 -d10s https://hub.docker.com/
 ```
+
+## Images
+
+* Alpine: `ruslanys/wrk:alpine`
+* Ubuntu: `ruslanys/wrk:ubuntu`
 
 ## wrk - a HTTP benchmarking tool
 
