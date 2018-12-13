@@ -11,8 +11,8 @@ $ docker run --rm -it ruslanys/wrk -t12 -c400 -d10s https://hub.docker.com/
 
 ## Images
 
+* Ubuntu: `ruslanys/wrk:latest`, `ruslanys/wrk:ubuntu`
 * Alpine: `ruslanys/wrk:alpine`
-* Ubuntu: `ruslanys/wrk:ubuntu`
 
 ## wrk - a HTTP benchmarking tool
 
