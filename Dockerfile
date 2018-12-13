@@ -1,17 +1,15 @@
-FROM ubuntu:18.04
-WORKDIR /root
+# Build
+FROM alpine:latest as build
+RUN apk add --update alpine-sdk perl
 
-RUN \
-    echo "Installing tools..." && \
-    apt-get update && apt-get install git build-essential -y && \
-    echo "Clonning repository..." && \
-    git clone https://github.com/wg/wrk.git && \
-    echo "Building wkr..." && \
-    cd wrk && make && \
-    cp wrk /usr/local/bin && \
-    echo "Cleaning..." && \
-    apt-get purge git build-essential -y && \
-    apt-get autoremove -y && \
-    rm -rf /root/wrk
+WORKDIR /tmp
+RUN git clone -b 4.0.2 https://github.com/wg/wrk
 
-CMD wrk
+WORKDIR /tmp/wrk
+RUN make
+
+# Image
+FROM alpine:latest
+RUN apk add --no-cache libgcc
+COPY --from=build /tmp/wrk/wrk /usr/local/bin/
+ENTRYPOINT ["wrk"]
