@@ -1,17 +1,14 @@
+# Build
+FROM ubuntu:18.04 as build
+RUN apt-get update && apt-get install git build-essential -y
+
+WORKDIR /tmp
+RUN git clone https://github.com/wg/wrk
+
+WORKDIR /tmp/wrk
+RUN make
+
+# Image
 FROM ubuntu:18.04
-WORKDIR /root
-
-RUN \
-    echo "Installing tools..." && \
-    apt-get update && apt-get install git build-essential -y && \
-    echo "Clonning repository..." && \
-    git clone https://github.com/wg/wrk.git && \
-    echo "Building wkr..." && \
-    cd wrk && make && \
-    cp wrk /usr/local/bin && \
-    echo "Cleaning..." && \
-    apt-get purge git build-essential -y && \
-    apt-get autoremove -y && \
-    rm -rf /root/wrk
-
-CMD wrk
+COPY --from=build /tmp/wrk/wrk /usr/local/bin/
+ENTRYPOINT ["wrk"]
