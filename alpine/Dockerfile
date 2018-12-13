@@ -13,3 +13,4 @@ FROM alpine:latest
 RUN apk add --no-cache libgcc
 COPY --from=build /tmp/wrk/wrk /usr/local/bin/
 ENTRYPOINT ["wrk"]
+CMD ["--help"]

@@ -12,3 +12,4 @@ RUN make
 FROM ubuntu:18.04
 COPY --from=build /tmp/wrk/wrk /usr/local/bin/
 ENTRYPOINT ["wrk"]
+CMD ["--help"]
