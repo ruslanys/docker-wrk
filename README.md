@@ -8,5 +8,5 @@
 ## Usage
 
 ```
-$ docker run --rm ruslanys/wrk wrk -t12 -c400 -d30s --latency http://localhost/endpoint
+$ docker run --rm ruslanys/wrk wrk -t12 -c400 -d30s --latency http://www.ru
 ```
