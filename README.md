@@ -6,7 +6,7 @@
 
 ### Ubuntu
 
-[![Image Size](https://img.shields.io/microbadger/image-size/ruslanys%2Fwrk.svg?style=flat-square&colorB=007EC6)](https://microbadger.com/images/ruslanys/wrk) [![Image Layers](https://img.shields.io/microbadger/layers/ruslanys%2Fwrk.svg?style=flat-square&colorB=007EC6)](https://microbadger.com/images/ruslanys/wrk)
+[![Image Size](https://img.shields.io/microbadger/image-size/ruslanys%2Fwrk/ubuntu.svg?style=flat-square&colorB=007EC6)](https://microbadger.com/images/ruslanys/wrk) [![Image Layers](https://img.shields.io/microbadger/layers/ruslanys%2Fwrk/ubuntu.svg?style=flat-square&colorB=007EC6)](https://microbadger.com/images/ruslanys/wrk)
 
 * `ruslanys/wrk:latest`
 * `ruslanys/wrk:ubuntu`
