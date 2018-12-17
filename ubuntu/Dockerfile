@@ -10,6 +10,7 @@ RUN make
 
 # Image
 FROM ubuntu:18.04
+RUN apt-get update && apt-get install netbase -y && rm -rf /var/lib/apt/lists/*
 COPY --from=build /tmp/wrk/wrk /usr/local/bin/
 ENTRYPOINT ["wrk"]
 CMD ["--help"]
