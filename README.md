@@ -1,21 +1,32 @@
 # wrk Docker image
 
-[![Docker Automated build](https://img.shields.io/docker/automated/ruslanys/wrk.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/ruslanys/wrk/) [![Docker Build Status](https://img.shields.io/docker/build/ruslanys/wrk.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/ruslanys/wrk/) [![Docker Pulls](https://img.shields.io/docker/pulls/ruslanys/wrk.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/ruslanys/wrk/)
+[![Docker Automated build](https://img.shields.io/docker/automated/ruslanys/wrk.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/ruslanys/wrk/)
+[![Docker Build Status](https://img.shields.io/docker/build/ruslanys/wrk.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/ruslanys/wrk/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/ruslanys/wrk.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/ruslanys/wrk/)
 
 ## Images
 
 ### Ubuntu
 
-[![Image Size](https://img.shields.io/microbadger/image-size/ruslanys%2Fwrk.svg?style=flat-square&colorB=007EC6)](https://microbadger.com/images/ruslanys/wrk) [![Image Layers](https://img.shields.io/microbadger/layers/ruslanys%2Fwrk.svg?style=flat-square&colorB=007EC6)](https://microbadger.com/images/ruslanys/wrk)
+[![Ubuntu Image Size](https://img.shields.io/microbadger/image-size/ruslanys%2Fwrk/ubuntu.svg?style=flat-square&colorB=007EC6)](https://microbadger.com/images/ruslanys/wrk)
+[![Ubuntu Image Layers](https://img.shields.io/microbadger/layers/ruslanys%2Fwrk/ubuntu.svg?style=flat-square&colorB=007EC6)](https://microbadger.com/images/ruslanys/wrk)
 
 * `ruslanys/wrk:latest`
 * `ruslanys/wrk:ubuntu`
 
 ### Alpine
 
-[![Image Size](https://img.shields.io/microbadger/image-size/ruslanys%2Fwrk/alpine.svg?style=flat-square&colorB=007EC6)](https://microbadger.com/images/ruslanys/wrk) [![Image Layers](https://img.shields.io/microbadger/layers/ruslanys%2Fwrk/alpine.svg?style=flat-square&colorB=007EC6)](https://microbadger.com/images/ruslanys/wrk)
+[![Alpine Image Size](https://img.shields.io/microbadger/image-size/ruslanys%2Fwrk/alpine.svg?style=flat-square&colorB=007EC6)](https://microbadger.com/images/ruslanys/wrk)
+[![Alpine Image Layers](https://img.shields.io/microbadger/layers/ruslanys%2Fwrk/alpine.svg?style=flat-square&colorB=007EC6)](https://microbadger.com/images/ruslanys/wrk)
 
 * `ruslanys/wrk:alpine`
+
+### Debian
+
+[![Debian Image Size](https://img.shields.io/microbadger/image-size/ruslanys%2Fwrk/debian.svg?style=flat-square&colorB=007EC6)](https://microbadger.com/images/ruslanys/wrk)
+[![Debian Image Layers](https://img.shields.io/microbadger/layers/ruslanys%2Fwrk/debian.svg?style=flat-square&colorB=007EC6)](https://microbadger.com/images/ruslanys/wrk)
+
+* `ruslanys/wrk:debian`
 
 
 ## Usage
