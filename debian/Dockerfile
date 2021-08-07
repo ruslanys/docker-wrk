@@ -1,6 +1,6 @@
 # Build
 FROM debian:stable-slim as build
-RUN apt-get update && apt-get install git build-essential -y
+RUN apt-get update && apt-get install git zip build-essential -y
 
 WORKDIR /tmp
 RUN git clone https://github.com/wg/wrk
