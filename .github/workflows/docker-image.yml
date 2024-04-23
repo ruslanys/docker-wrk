@@ -18,7 +18,8 @@ jobs:
         env:
           HUB_TOKEN: ${{ secrets.HUB_TOKEN }}
         run: |
-          docker build alpine/. --file Dockerfile --tag ruslanys/wrk:alpine
+          cd alpine/
+          docker build . --file Dockerfile --tag ruslanys/wrk:alpine
           docker login -u ruslanys -p $HUB_TOKEN
           docker push ruslanys/wrk:alpine
 
