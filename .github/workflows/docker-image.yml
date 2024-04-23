@@ -13,14 +13,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ruslanys/wrk
+      - uses: actions/checkout@v4
+      - name: Build Alpine
+        env:
+          HUB_TOKEN: ${{ secrets.HUB_TOKEN }}
+        run: |
+          docker build alpine/. --file Dockerfile --tag ruslanys/wrk:alpine
+          docker login -u ruslanys -p $HUB_TOKEN
+          docker push ruslanys/wrk:alpine
 
-    - uses: actions/checkout@v4
-    - name: Publish the Docker image
-      env:
-        HUB_TOKEN: ${{ secrets.HUB_TOKEN }}
-      run: |
-        docker login -u ruslanys -p $HUB_TOKEN
-        docker push ruslanys/wrk
+      - uses: actions/checkout@v4
+      - name: Build Debian
+        env:
+          HUB_TOKEN: ${{ secrets.HUB_TOKEN }}
+        run: |
+          docker build debian/. --file Dockerfile --tag ruslanys/wrk:debian
+          docker login -u ruslanys -p $HUB_TOKEN
+          docker push ruslanys/wrk:debian
+
+      - uses: actions/checkout@v4
+      - name: Build Ubuntu
+        env:
+          HUB_TOKEN: ${{ secrets.HUB_TOKEN }}
+        run: |
+          docker build ubuntu/. --file Dockerfile --tag ruslanys/wrk:ubuntu
+          docker build ubuntu/. --file Dockerfile --tag ruslanys/wrk
+          docker login -u ruslanys -p $HUB_TOKEN
+          docker push ruslanys/wrk:ubuntu
+          docker push ruslanys/wrk
