@@ -18,8 +18,7 @@ jobs:
         env:
           HUB_TOKEN: ${{ secrets.HUB_TOKEN }}
         run: |
-          cd alpine/
-          docker build . --file Dockerfile --tag ruslanys/wrk:alpine
+          docker build --file alpine/Dockerfile --tag ruslanys/wrk:alpine
           docker login -u ruslanys -p $HUB_TOKEN
           docker push ruslanys/wrk:alpine
 
@@ -28,7 +27,7 @@ jobs:
         env:
           HUB_TOKEN: ${{ secrets.HUB_TOKEN }}
         run: |
-          docker build debian/. --file Dockerfile --tag ruslanys/wrk:debian
+          docker build --file debian/Dockerfile --tag ruslanys/wrk:debian
           docker login -u ruslanys -p $HUB_TOKEN
           docker push ruslanys/wrk:debian
 
@@ -37,8 +36,8 @@ jobs:
         env:
           HUB_TOKEN: ${{ secrets.HUB_TOKEN }}
         run: |
-          docker build ubuntu/. --file Dockerfile --tag ruslanys/wrk:ubuntu
-          docker build ubuntu/. --file Dockerfile --tag ruslanys/wrk
+          docker build --file ubuntu/Dockerfile --tag ruslanys/wrk:ubuntu
+          docker build --file ubuntu/Dockerfile --tag ruslanys/wrk
           docker login -u ruslanys -p $HUB_TOKEN
           docker push ruslanys/wrk:ubuntu
           docker push ruslanys/wrk
